@@ -5,9 +5,12 @@ using UnityEngine;
 public class StickmanBehaviour : MonoBehaviour
 {   
     public Rigidbody2D player;
-    bool isJumpKeyPressed;
     public GameObject bullet;
     public GameObject ak;
+    bool isJumpKeyPressed;
+    int jumpCount;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +20,13 @@ public class StickmanBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) && jumpCount<2)
         {
             isJumpKeyPressed = true;
+            jumpCount++;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             Instantiate(bullet,
                 new Vector2(ak.transform.position.x + 1.2f, ak.transform.position.y + 0.1f),
@@ -32,12 +36,19 @@ public class StickmanBehaviour : MonoBehaviour
 
     private void FixedUpdate() {
 
-        //player.velocity = new Vector2(Input.GetAxisRaw("Horizontal")*10, 0);
+        player.velocity = new Vector2(Input.GetAxisRaw("Horizontal")*10, player.velocity.y);
 
         if (isJumpKeyPressed) {
-            Debug.Log("test");
             player.AddForce(Vector2.up * 15, ForceMode2D.Impulse);
             isJumpKeyPressed = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {   
+        if(collision.gameObject.name == "Floor")
+        {
+            jumpCount = 0;
         }
     }
 }

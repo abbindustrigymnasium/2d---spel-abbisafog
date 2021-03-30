@@ -188,12 +188,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1752493954}
   - {fileID: 68646524}
   - {fileID: 392658023}
   - {fileID: 333542873}
   - {fileID: 648016297}
   - {fileID: 463918506}
+  - {fileID: 1752493954}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -227,7 +227,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 59649347}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &68646525
 SpriteRenderer:
@@ -435,7 +435,7 @@ Transform:
   - {fileID: 145429824}
   - {fileID: 1659487326}
   m_Father: {fileID: 59649347}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &392658022
 GameObject:
@@ -467,7 +467,7 @@ Transform:
   m_LocalScale: {x: 0.1588, y: 1.4035, z: 1}
   m_Children: []
   m_Father: {fileID: 59649347}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &392658024
 SpriteRenderer:
@@ -576,7 +576,7 @@ Transform:
   m_LocalScale: {x: 0.1588, y: 0.7821149, z: 1}
   m_Children: []
   m_Father: {fileID: 59649347}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &463918507
 BoxCollider2D:
@@ -877,7 +877,7 @@ Transform:
   - {fileID: 497605495}
   - {fileID: 1271348418}
   m_Father: {fileID: 59649347}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1182628935
 GameObject:
@@ -1235,7 +1235,7 @@ Transform:
   m_LocalScale: {x: 0.45, y: 0.45, z: 1}
   m_Children: []
   m_Father: {fileID: 59649347}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1752493955
 SpriteRenderer:
